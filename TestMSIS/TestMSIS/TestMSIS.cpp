@@ -51,7 +51,7 @@ typedef struct msise_inputrec
 
 // local functions
 // test the routine against the nrl test cases
-void main();
+int main();
 //void int_tmain();
 
 void testjb06();
@@ -64,7 +64,7 @@ void mainplugin( double[], double[], double );
 //using namespace System;
 
 //void int_tmain(array<System::String ^> ^args)
-void main()
+int main()
 {
  	msisinput input[17];
 	int i, mass;
@@ -238,6 +238,8 @@ void main()
           }
 
 	printf("\n");
+
+        return 0;
         }
 
 

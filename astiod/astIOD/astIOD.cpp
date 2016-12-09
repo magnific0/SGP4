@@ -1,6 +1,6 @@
 /* -----------------------------------------------------------------------------
 *
-*                                astIOD.cpp
+*                                astiod.cpp
 *
 *   this file contains fundamental astrodynamic procedures and functions
 *   relating to the initial orbit determination techniques. see ch 4, and ch 7
@@ -1790,9 +1790,9 @@ double v2[3], double& theta, double& theta1, double& copa, char error[12]
 	if ((theta > tolangle) || (theta1 > tolangle))
 	{
 #ifdef _MSC_VER
-		strcpy_s(error, sizeof(error), "angle > 1ø");
+		strcpy_s(error, sizeof(error), "angle > 1?");
 #else
-		strcpy(error, "angle > 1ø");
+		strcpy(error, "angle > 1?");
 #endif
 	}
 

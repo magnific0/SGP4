@@ -29,9 +29,9 @@
 
 //#define pi 3.14159265358979323846
 
-void main
-	(
-	);
+// void main
+// 	(
+// 	);
 
 // example for plugin to HPOP
 void mainplugin
@@ -223,7 +223,7 @@ using namespace std; // it allows you to do things like cin>> cout<< etc.
 *
 *  -------------------------------------------------------------------------- */
 
-void main()
+int main()
 {
     // Math parameters
     double deg2rad; //< Convert from degrees to radians
@@ -287,6 +287,7 @@ void main()
     Pi      = 3.14159265358979323846;
 
 	// initialize variables for the density uncertainty and dtm
+#ifdef _MSC_VER
 	strcpy_s(PATH_TO_DTM2012_IN_FILE, sizeof(char), "");
 	strcpy_s(PATH_TO_DTM2012_IN_FILE, sizeof(PATH_TO_DTM2012_IN_FILE), "D:/Codes/LIBRARY/CPP/TestDTM/Data/dtm_2012_NF.dat");
 	strcpy_s(PATH_TO_DTM2012_OUT_FILE, sizeof(char), "");
@@ -297,6 +298,19 @@ void main()
 	strcpy_s(PATH_TO_DEN_UNC_2, sizeof(PATH_TO_DEN_UNC_2), "D:/Codes/LIBRARY/CPP/TestDTM/Data/smoothratio_kpmin4-to-max3");
 	strcpy_s(PATH_TO_DEN_UNC_3, sizeof(char), "");
 	strcpy_s(PATH_TO_DEN_UNC_3, sizeof(PATH_TO_DEN_UNC_3), "D:/Codes/LIBRARY/CPP/TestDTM/Data/smoothratio_500to350km");
+#else
+	strcpy_s(PATH_TO_DTM2012_IN_FILE, "");
+	strcpy_s(PATH_TO_DTM2012_IN_FILE, "D:/Codes/LIBRARY/CPP/TestDTM/Data/dtm_2012_NF.dat");
+	strcpy_s(PATH_TO_DTM2012_OUT_FILE, "");
+	strcpy_s(PATH_TO_DTM2012_OUT_FILE, "D:/Codes/LIBRARY/CPP/TestDTM/Data/dtm_2012_NF.out");
+	strcpy_s(PATH_TO_DEN_UNC_1, "");
+	strcpy_s(PATH_TO_DEN_UNC_1, "D:/Codes/LIBRARY/CPP/TestDTM/Data/smoothrelvar_350km_kpmax3");
+	strcpy_s(PATH_TO_DEN_UNC_2, "");
+	strcpy_s(PATH_TO_DEN_UNC_2, "D:/Codes/LIBRARY/CPP/TestDTM/Data/smoothratio_kpmin4-to-max3");
+	strcpy_s(PATH_TO_DEN_UNC_3, "");
+	strcpy_s(PATH_TO_DEN_UNC_3, "D:/Codes/LIBRARY/CPP/TestDTM/Data/smoothratio_500to350km");
+#endif
+
 
 	DTM_12::DTMInit(PATH_TO_DEN_UNC_1, PATH_TO_DEN_UNC_2, PATH_TO_DEN_UNC_3, PATH_TO_DTM2012_IN_FILE, PATH_TO_DTM2012_OUT_FILE, 
 		     IVERIF, nomgrid, kp_scale, alt_scale,  pardtm );
@@ -399,6 +413,8 @@ void main()
 	DTM_12::JD2000(jdutc, today.year, today.month, today.day, today.hour, today.minute, today.second);
 	dut1 = 0.6453; // need to update this for each date selected, but it's small
 //	mainplugin(recef, vecef, jdutc, dut1);
+        
+        return 0;
 
 }   // end main
 

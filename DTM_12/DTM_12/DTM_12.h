@@ -23,7 +23,9 @@
 *     *****************************************************************       */
 
 #include <math.h>
+#ifdef _MSC_VER
 #include <io.h>      
+#endif
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

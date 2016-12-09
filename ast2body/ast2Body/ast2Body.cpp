@@ -1,6 +1,6 @@
 /*     -------------------------------------------------------------------------
 *
-*                                ast2Body.cpp
+*                                ast2body.cpp
 *
 *   this file contains fundamental astrodynamic procedures and functions
 *   using 2-body dynamics. the routines span a wide range of material, and
@@ -1158,7 +1158,7 @@ void newtonm
 *
 *  this function solves keplers equation when the true anomaly is known.
 *    the mean and eccentric, parabolic, or hyperbolic anomaly is also found.
-*    the parabolic limit at 168ø is arbitrary. the hyperbolic anomaly is also
+*    the parabolic limit at 168? is arbitrary. the hyperbolic anomaly is also
 *    limited. the hyperbolic sine is used because it's not double valued.
 *
 *  author        : david vallado                  719-573-2600   27 may 2002

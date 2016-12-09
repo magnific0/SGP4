@@ -50,6 +50,15 @@
 #include <string.h>
 #include <fstream>
 #include <iostream>
+#ifdef __GNUC__
+typedef int errno_t;
+#include <errno.h>
+errno_t fopen_s(FILE** pFile, const char *filename, const char *mode){
+  *pFile = fopen(filename, mode);
+  return errno;
+}
+#endif
+
 
 extern char help;
 extern FILE *dbgfile;
@@ -66,7 +75,7 @@ gravconsttype  whichconst;
 int whichcon;
 
 
-int _tmain(int argc, _TCHAR* argv[])
+int main(int argc, char* argv[])
 //int main(array<System::String ^> ^args)
 //int main()
 {

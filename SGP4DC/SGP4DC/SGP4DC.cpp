@@ -1,6 +1,6 @@
 /* -----------------------------------------------------------------------------
 *
-*                               sgp4DC.cpp
+*                               SGP4DC.cpp
 *
 *    this file contains the differential corrections routines using the sgp4
 *    analytical propagation code.a detailed discussion of the theory and history
@@ -30,7 +30,7 @@
 
 //#include "stdafx.h"
 
-#include "sgp4DC.h"
+#include "SGP4DC.h"
 
 
 namespace SGP4DC {

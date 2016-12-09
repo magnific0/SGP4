@@ -1494,7 +1494,7 @@ void DTMInit
 #ifdef _MSC_VER
 			strncpy_s(tempstr, &longstr1[j * 276 + (i + j) * 12], 11); // starts at 0
 #else
-			strncpy(tempstr, &longstr1[j * 276 + (i + j) * 12]); // starts at 0
+			strncpy(tempstr, &longstr1[j * 276 + (i + j) * 12], 11); // starts at 0
 #endif
 			tempstr[11] = '\0';  // each variable is just 11 chars long. put endofstr marker AT 11
             ScientificToDouble(tempstr, tempo);
@@ -1510,7 +1510,7 @@ void DTMInit
 #ifdef _MSC_VER
 			strncpy_s(tempstr, &longstr1[j * 276 + (i + j) * 12], 11); // starts at 0
 #else
-			strncpy(tempstr, &longstr1[j * 276 + (i + j) * 12]); // starts at 0
+			strncpy(tempstr, &longstr1[j * 276 + (i + j) * 12], 11); // starts at 0
 #endif
 			tempstr[11] = '\0';  // each variable is just 11 chars long. put endofstr marker AT 11
             ScientificToDouble(tempstr, tempo);
@@ -1526,7 +1526,7 @@ void DTMInit
 #ifdef _MSC_VER
 			strncpy_s(tempstr, &longstr1[j * 276 + (i + j) * 12], 11); // starts at 0
 #else
-			strncpy(tempstr, &longstr1[j * 276 + (i + j) * 12]); // starts at 0
+			strncpy(tempstr, &longstr1[j * 276 + (i + j) * 12], 11); // starts at 0
 #endif
 			tempstr[11] = '\0';  // each variable is just 11 chars long. put endofstr marker AT 11
             ScientificToDouble(tempstr, tempo);

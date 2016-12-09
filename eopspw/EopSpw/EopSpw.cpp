@@ -87,7 +87,7 @@ namespace EopSpw {
 #ifdef _MSC_VER
 			strncpy_s(str, &longstr[13], 6);
 #else
-			strncpy(str, &longstr[13]);
+			strncpy(str, &longstr[13], 6);
 #endif
 			str[6] = '\0';
 			i = i + 1;
@@ -264,7 +264,7 @@ namespace EopSpw {
 #ifdef _MSC_VER
 			strncpy_s(str, &longstr[13], 6);
 #else
-			strncpy(str, &longstr[13]);
+			strncpy(str, &longstr[13], 6);
 #endif
 			str[6] = '\0';
 			i = i + 1;

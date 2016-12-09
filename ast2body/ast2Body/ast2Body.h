@@ -2,7 +2,7 @@
 #define _ast2Body_h_
 /* --------------------------------------------------------------------
 *
-*                                ast2body.h
+*                                ast2Body.h
 *
 *    this file contains miscallaneous two-body motion functions.
 *
